@@ -16,11 +16,9 @@ function start(){
 
 	tl.from(".t1", .4, {x:-size.w}, "+=.2")
 	
-	
-	tl.add( mask_tw( [".line_1", ".line_2", ".line_3"] ), "+=.2"	)
-	
-	
-	tl.to(".person", 1.2, {scale:.5, ease:Back.easeOut})
+	tl.add("bang", "+=.3")
+	tl.add( mask_tw( [".line_1", ".line_2", ".line_3"] ), "bang"	)
+	tl.to(".person", 1.2, {scale:.5, ease:Back.easeOut}, "bang")
 	
 	tl.add("f2", "+=2")
 	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
@@ -50,7 +48,7 @@ function mask_tw(list){
 	const line_tw = new TimelineMax()
 	list.map(item=>{
 
-		line_tw.from(item, .4, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`}, 0)	
+		line_tw.from(item, 1, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`}, 0)	
 	})
 	
 	
