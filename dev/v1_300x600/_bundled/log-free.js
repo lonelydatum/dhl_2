@@ -28,7 +28,7 @@ function start() {
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
-	tl.add("bang", "+=.3");
+	tl.add("bang", "+=.2");
 	tl.add(mask_tw([".line_1", ".line_2", ".line_3"]), "bang");
 	tl.to(".person", 1.2, { scale: .5, ease: Power3.easeOut }, "bang");
 
@@ -62,7 +62,7 @@ function mask_tw(list) {
 	var line_tw = new TimelineMax();
 	list.map(function (item) {
 
-		line_tw.from(item, 1, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" }, 0);
+		line_tw.from(item, 1.6, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" }, 0);
 	});
 
 	return line_tw;
