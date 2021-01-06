@@ -20,7 +20,7 @@ function start(){
 	tl.add( mask_tw( [".line_1", ".line_2", ".line_3"] ), "bang"	)
 	tl.to(".person", 1.2, {scale:.5, ease:Power3.easeOut}, "bang")
 	
-	tl.add("f2", "+=2")
+	tl.add("f2", 5)
 	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 
