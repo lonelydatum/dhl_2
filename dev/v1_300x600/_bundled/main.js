@@ -22,16 +22,17 @@ function start() {
 	TweenLite.defaultEase = Power2.easeOut;
 
 	tl.set(".frame1", { opacity: 1 });
+	tl.set(".person", { scale: 0, x: -_commonJsCommonJs.size.w, y: -_commonJsCommonJs.size.h, transformOrigin: "100% 100%" });
 
 	mask_list([".line_1", ".line_2", ".line_3"]);
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
-	tl.add(mask_tw(".line_1"), "+=.3");
-	tl.add(mask_tw(".line_2"));
-	tl.add(mask_tw(".line_3"));
+	tl.add(mask_tw([".line_1", ".line_2", ".line_3"]), "+=.2");
 
-	tl.add("f2", "+=3");
+	tl.to(".person", 1.2, { scale: .5, ease: Back.easeOut });
+
+	tl.add("f2", "+=2");
 	tl.to([".line", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
 
@@ -57,9 +58,13 @@ function mask_set(el) {
 	TweenMax.set(el, { clip: "rect(0px, " + _commonJsCommonJs.size.ww + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
 }
 
-function mask_tw(el) {
+function mask_tw(list) {
 	var line_tw = new TimelineMax();
-	line_tw.from(el, .4, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	list.map(function (item) {
+
+		line_tw.from(item, .4, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" }, 0);
+	});
+
 	return line_tw;
 }
 
