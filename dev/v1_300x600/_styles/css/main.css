@@ -276,8 +276,8 @@ sup {
 }
 
 .rotating {
-  -webkit-animation: rotating_keyframes 8s linear 2;
-  animation: rotating_keyframes 8s linear 2;
+  -webkit-animation: rotating_keyframes 16s linear 2;
+  animation: rotating_keyframes 16s linear 2;
 }
 
 /*# sourceMappingURL=main.css.map */
