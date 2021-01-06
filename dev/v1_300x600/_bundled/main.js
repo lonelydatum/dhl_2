@@ -27,19 +27,23 @@ function start() {
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
-	tl.add(mask_tw(".line_1"));
+	tl.add(mask_tw(".line_1"), "+=.3");
 	tl.add(mask_tw(".line_2"));
 	tl.add(mask_tw(".line_3"));
 
-	tl.add("f2", "+=2");
-	tl.to([".line", ".t1"], .3, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
-	tl.from(".t2", .3, { x: -_commonJsCommonJs.size.w }, "f2");
+	tl.add("f2", "+=3");
+	tl.to([".line", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
+	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
 
-	tl.add("end", "+=2");
+	tl.add("end", "+=4");
 	tl.to(".frame1", .3, { opacity: 0 }, "end");
 	tl.to(".frame2", .3, { opacity: 1 }, "+=.2");
 
-	tl.set(".logo_hwc_1", { className: "rotating" });
+	tl.from([".t3_terms", ".t3"], .7, { opacity: 0 }, "+=.5");
+
+	// tl.from(".logo_hwc", .5, {opacity:0}, "+=.5")
+
+	tl.set(".logo_hwc_1", { className: "rotating" }, "end");
 	// tl.gotoAndPlay("end")
 }
 
@@ -55,7 +59,7 @@ function mask_set(el) {
 
 function mask_tw(el) {
 	var line_tw = new TimelineMax();
-	line_tw.from(el, .5, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	line_tw.from(el, .4, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
 	return line_tw;
 }
 
