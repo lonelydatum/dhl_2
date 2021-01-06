@@ -23,7 +23,7 @@ function start(){
 	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 
-	tl.add("end", "+=4")
+	tl.add("end", "+=4.5")
 	tl.to(".frame1", .3, {opacity:0}, "end")
 	tl.to(".frame2", .3, {opacity:1}, "+=.2")
 
