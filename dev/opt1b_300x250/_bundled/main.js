@@ -18,7 +18,10 @@ function init_set() {
 function end(read) {
 	var tl_end = new TimelineMax();
 	tl_end.add("end", "+=" + read.t2);
-	tl_end.set(".logo_hwc_1", { className: "rotating" }, "end");
+	if (document.getElementById("logo_hwc_1")) {
+		tl_end.set("#logo_hwc_1", { className: "rotating" }, "end");
+	}
+
 	tl_end.to(".frame1", .3, { opacity: 0 }, "end");
 	tl_end.to(".frame2", .3, { opacity: 1 }, "+=.2");
 	tl_end.from([".t3_terms", ".t3"], .7, { opacity: 0 }, "+=.5");
@@ -47,7 +50,7 @@ exports.init_set = init_set;
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 var tl = new TimelineMax();
-var read = _commonJsCommonJs.banners.opt1a;
+var read = _commonJsCommonJs.banners.opt1b;
 
 function start() {
 

@@ -1,7 +1,8 @@
 import {size, banners, end, init_set} from '../../_common/js/common.js'
 
 const tl = new TimelineMax()
-const read = banners.opt1a
+const read = banners.opt1b
+
 
 function start(){
 	
