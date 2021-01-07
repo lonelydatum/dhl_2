@@ -20,7 +20,7 @@ function start(){
 	
 	
 	tl.add("f2", read.t1)
-	tl.to([".line", ".t1"], .5, {opacity:0, x:150}, "f2")
+	tl.to([".line_1", ".t1"], .5, {opacity:0, x:150}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 	tl.from(".line_2", .6, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 
