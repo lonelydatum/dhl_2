@@ -16,6 +16,7 @@ function init_set() {
 }
 
 function end(read) {
+	console.log(read);
 	var tl_end = new TimelineMax();
 	tl_end.add("end", "+=" + read.t2);
 	if (document.getElementById("logo_hwc_1")) {
@@ -31,15 +32,19 @@ function end(read) {
 var banners = {
 	opt1a: {
 		t1: 3.8,
-		t2: 2.7
+		t2: 2.3
 	},
 	opt1b: {
 		t1: 2.8,
-		t2: 2.2
+		t2: 2
 	},
 	opt2a: {
 		t1: 3.8,
-		t2: 3
+		t2: 2.3
+	},
+	opt2b: {
+		t1: 2.8,
+		t2: 2
 	}
 };
 
