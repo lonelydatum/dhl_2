@@ -35,7 +35,7 @@ const banners = {
 	},
 	opt2a:{
 		t1: 3.8,
-		t2: 2.7
+		t2: 3
 	}
 }
 
