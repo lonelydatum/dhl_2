@@ -20,14 +20,14 @@ function end(read){
 	
 	tl_end.to(".frame1", .3, {opacity:0}, "end")
 	tl_end.to(".frame2", .3, {opacity:1}, "+=.2")
-	tl_end.from([".t3_terms", ".t3"], .7, {opacity:0}, "+=.5")
+	tl_end.from([".t3_terms", ".t3"], .7, {opacity:0}, "+=.3")
 	return tl_end
 }
 
 const banners = {
 	opt1a:{
-		t1: 3.7,
-		t2: 3.7
+		t1: 3.5,
+		t2: 3.2
 	},
 	opt1b:{
 		t1: 2.5,
