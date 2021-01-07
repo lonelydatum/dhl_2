@@ -18,7 +18,8 @@ function start(){
 	
 	
 	tl.from(".terms", .4, {opacity:0}, "+=.2")
-	tl.set("#logo_hwc_1", {className:"rotating"}, 2)		
+	tl.from(".logo_hwc", .5, {opacity:0}, "+=.2")
+	tl.set("#logo_hwc_1", {className:"rotating"}, "+=.5")		
 
 
 	
