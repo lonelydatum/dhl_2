@@ -30,7 +30,7 @@ function end(read) {
 
 var banners = {
 	opt1a: {
-		t1: 3.5,
+		t1: 3.8,
 		t2: 3.2
 	},
 	opt1b: {
