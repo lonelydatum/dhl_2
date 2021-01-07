@@ -17,9 +17,8 @@ function start(){
 	tl.from(".line", 1, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 	
 	
-	tl.from(".terms", .4, {opacity:0}, "+=.2")
-	tl.from(".logo_hwc", .5, {opacity:0}, "+=.2")
-	tl.set("#logo_hwc_1", {className:"rotating"}, "+=.5")		
+	tl.from([".logo_hwc", ".terms"], .5, {opacity:0}, "+=.2")
+	tl.set("#logo_hwc_1", {className:"rotating"}, "-=.2")		
 
 
 	
