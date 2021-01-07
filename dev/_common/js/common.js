@@ -27,11 +27,11 @@ function end(read){
 const banners = {
 	opt1a:{
 		t1: 3.8,
-		t2: 3
+		t2: 2.7
 	},
 	opt1b:{
 		t1: 2.8,
-		t2: 2.5
+		t2: 2.2
 	},
 	opt2a:{
 		t1: 3.8,
