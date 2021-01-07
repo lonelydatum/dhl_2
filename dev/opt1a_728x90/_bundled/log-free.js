@@ -34,8 +34,8 @@ var banners = {
 		t2: 3.2
 	},
 	opt1b: {
-		t1: 2.5,
-		t2: 3
+		t1: 2.8,
+		t2: 2.7
 	}
 };
 
@@ -59,20 +59,13 @@ function start() {
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 	tl.from(".line", 1.6, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
 
-	tl.add("f2", "+=" + read.t1);
+	tl.add("f2", read.t1);
 	tl.to([".line", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
 
 	tl.add((0, _commonJsCommonJs.end)(read));
 
 	// tl.gotoAndPlay("end")
-}
-
-function grow() {
-	var tl_bang = new TimelineMax();
-	tl_bang.add("bang", 1);
-
-	// tl_bang.to(".person", 1.2, {scale:.5, ease:Power3.easeOut}, "bang")
 }
 
 start();

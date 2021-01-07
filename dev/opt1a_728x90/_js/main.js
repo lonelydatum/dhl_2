@@ -19,7 +19,7 @@ function start(){
 	
 	
 	
-	tl.add("f2", `+=${read.t1}`)
+	tl.add("f2", read.t1)
 	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 
@@ -33,12 +33,6 @@ function start(){
 
 
 
-function grow(){
-	const tl_bang = new TimelineMax()
-	tl_bang.add("bang", 1)
-	
-	// tl_bang.to(".person", 1.2, {scale:.5, ease:Power3.easeOut}, "bang")
-}
 
 
 start()
