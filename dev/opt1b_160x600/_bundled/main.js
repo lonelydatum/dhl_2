@@ -31,10 +31,14 @@ function end(read) {
 var banners = {
 	opt1a: {
 		t1: 3.8,
-		t2: 3.2
+		t2: 3
 	},
 	opt1b: {
 		t1: 2.8,
+		t2: 2.5
+	},
+	opt2a: {
+		t1: 3.8,
 		t2: 2.7
 	}
 };
