@@ -9,10 +9,16 @@ var size = { ww: 2 * banner.offsetWidth, w: banner.offsetWidth, h: banner.offset
 
 TweenLite.defaultEase = Power2.easeInOut;
 
+// function init_set() {
+// 	TweenMax.set([".line"], {clip: `rect(0px, ${size.ww}px, ${size.hh}px, 0px)`})	
+// 	TweenMax.set(".frame1", {opacity:1})
+// 	TweenMax.set(".person",  {scale:0, x:-size.w, y:-size.h, transformOrigin:"100% 100%"})
+// }
+
 function init_set() {
-	TweenMax.set([".line"], { clip: "rect(0px, " + size.ww + "px, " + size.hh + "px, 0px)" });
+	// TweenMax.set([".line"], {clip: `rect(0px, ${size.ww}px, ${size.hh}px, 0px)`})	
 	TweenMax.set(".frame1", { opacity: 1 });
-	TweenMax.set(".person", { scale: 0, x: -size.w, y: -size.h, transformOrigin: "100% 100%" });
+	// TweenMax.set(".person",  {scale:0, x:-size.w, y:-size.h, transformOrigin:"100% 100%"})
 }
 
 function end(read) {
@@ -31,8 +37,8 @@ function end(read) {
 
 var banners = {
 	opt1a: {
-		t1: 3.8,
-		t2: 2.3
+		t1: 4,
+		t2: 2.6
 	},
 	opt1b: {
 		t1: 2.8,
@@ -64,13 +70,13 @@ var read = _commonJsCommonJs.banners.opt1a;
 function start() {
 
 	(0, _commonJsCommonJs.init_set)();
-
-	grow();
+	tl.from(".gradient", .4, { y: -200, opacity: 0 }, "+=.2");
+	// grow()
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
 	tl.add("f2", read.t1);
-	tl.to([".line", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
+	tl.to([".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
 
 	tl.add((0, _commonJsCommonJs.end)(read));
@@ -81,8 +87,8 @@ function start() {
 function grow() {
 	var tl_bang = new TimelineMax();
 	tl_bang.add("bang", 1);
-	tl_bang.from(".line", 1.6, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" }, "bang");
-	tl_bang.to(".person", 1.2, { scale: .5, ease: Power3.easeOut }, "bang");
+	// tl_bang.from(".line", 1.6, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`}, "bang")		
+	// tl_bang.to(".person", 1.2, {scale:.5, ease:Power3.easeOut}, "bang")
 }
 
 start();

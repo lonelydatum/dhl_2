@@ -9,10 +9,16 @@ var size = { ww: 2 * banner.offsetWidth, w: banner.offsetWidth, h: banner.offset
 
 TweenLite.defaultEase = Power2.easeInOut;
 
+// function init_set() {
+// 	TweenMax.set([".line"], {clip: `rect(0px, ${size.ww}px, ${size.hh}px, 0px)`})	
+// 	TweenMax.set(".frame1", {opacity:1})
+// 	TweenMax.set(".person",  {scale:0, x:-size.w, y:-size.h, transformOrigin:"100% 100%"})
+// }
+
 function init_set() {
-	TweenMax.set([".line"], { clip: "rect(0px, " + size.ww + "px, " + size.hh + "px, 0px)" });
+	// TweenMax.set([".line"], {clip: `rect(0px, ${size.ww}px, ${size.hh}px, 0px)`})	
 	TweenMax.set(".frame1", { opacity: 1 });
-	TweenMax.set(".person", { scale: 0, x: -size.w, y: -size.h, transformOrigin: "100% 100%" });
+	// TweenMax.set(".person",  {scale:0, x:-size.w, y:-size.h, transformOrigin:"100% 100%"})
 }
 
 function end(read) {
@@ -31,8 +37,8 @@ function end(read) {
 
 var banners = {
 	opt1a: {
-		t1: 3.8,
-		t2: 2.3
+		t1: 4,
+		t2: 2.6
 	},
 	opt1b: {
 		t1: 2.8,
