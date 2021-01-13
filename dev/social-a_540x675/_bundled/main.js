@@ -70,13 +70,11 @@ function start() {
 
 	(0, _commonJsCommonJs.init_set)();
 
-	tl.from([".t1a", ".t1b", ".t1c"], .6, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1a"], .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1b"], .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1c"], .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
-	tl.from(".line", 1, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
-
-	tl.to(".person", 1, { scale: .5, ease: Power3.easeOut });
-
-	tl.from(".terms", 1, { opacity: 0 }, "+=.2");
+	tl.from(".terms", .4, { opacity: 0 }, "+=.2");
 
 	// tl.gotoAndPlay("end")
 }
