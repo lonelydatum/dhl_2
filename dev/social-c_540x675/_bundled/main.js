@@ -71,7 +71,9 @@ function start() {
 
 	(0, _commonJsCommonJs.init_set)();
 
-	tl.from([".t1a", ".t1b", ".t1c"], .6, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1a"], .6, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1b"], .6, { x: -_commonJsCommonJs.size.w }, "+=.2");
+	tl.from([".t1c"], .6, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
 	tl.from(".line", 1, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
 
