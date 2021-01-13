@@ -14,9 +14,9 @@ function start(){
 	
 	
 	
-	tl.from([".t1a"], .6, {x:-size.w}, "+=.2")
-	tl.from([".t1b"], .6, {x:-size.w}, "+=.2")
-	tl.from([".t1c"], .6, {x:-size.w}, "+=.2")
+	tl.from([".t1a"], .4, {x:-size.w}, "+=.2")
+	tl.from([".t1b"], .4, {x:-size.w}, "+=.2")
+	tl.from([".t1c"], .4, {x:-size.w}, "+=.2")
 	
 	tl.from(".line", 1, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 	
