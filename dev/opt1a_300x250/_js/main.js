@@ -8,8 +8,8 @@ function start(){
 	
 	
 	init_set()
-	
-	grow()
+	tl.from(".gradient", .4, {y:-200, opacity:0}, "+=.2")
+	// grow()
 	
 	
 	
@@ -19,11 +19,10 @@ function start(){
 	
 	
 	tl.add("f2", read.t1)
-	tl.to([".line", ".t1"], .5, {opacity:0, x:150}, "f2")
+	tl.to([".t1"], .5, {opacity:0, x:150}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 
 	tl.add( end(read) )
-	
 	
 	// tl.gotoAndPlay("end")
 }

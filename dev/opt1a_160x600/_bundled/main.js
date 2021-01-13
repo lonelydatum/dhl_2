@@ -70,15 +70,13 @@ var read = _commonJsCommonJs.banners.opt1a;
 function start() {
 
 	(0, _commonJsCommonJs.init_set)();
-	TweenMax.set(".person", { scale: 0, x: -_commonJsCommonJs.size.w - 90, y: -_commonJsCommonJs.size.h, transformOrigin: "100% 100%" });
-
-	grow();
+	tl.from(".gradient", .4, { y: -200, opacity: 0 }, "+=.2");
+	// grow()
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
 
 	tl.add("f2", read.t1);
-
-	tl.to([".line", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
+	tl.to([".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
 
 	tl.add((0, _commonJsCommonJs.end)(read));

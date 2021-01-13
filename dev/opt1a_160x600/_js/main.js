@@ -7,12 +7,10 @@ function start(){
 	
 	
 	
+	
 	init_set()
-	TweenMax.set(".person",  {scale:0, x:-size.w-90, y:-size.h, transformOrigin:"100% 100%"})
-	
-	grow()
-
-	
+	tl.from(".gradient", .4, {y:-200, opacity:0}, "+=.2")
+	// grow()
 	
 	
 	
@@ -22,11 +20,11 @@ function start(){
 	
 	
 	tl.add("f2", read.t1)
-	
-	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
+	tl.to([".t1"], .5, {opacity:0, x:size.w}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
 
 	tl.add( end(read) )
+	
 	
 	
 	// tl.gotoAndPlay(10)

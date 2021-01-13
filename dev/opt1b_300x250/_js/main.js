@@ -9,8 +9,8 @@ function start(){
 	
 	
 	init_set()
-	
-	grow()
+	tl.from(".gradient", .4, {y:-200, opacity:0}, "+=.2")
+	// grow()
 	
 	
 	
@@ -20,13 +20,10 @@ function start(){
 	
 	
 	tl.add("f2", read.t1)
-	tl.to([".line_1", ".t1"], .5, {opacity:0, x:150}, "f2")
+	tl.to([".t1"], .5, {opacity:0, x:150}, "f2")
 	tl.from(".t2", .5, {x:-size.w}, "f2")
-	tl.from(".line_2", .6, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 
 	tl.add( end(read) )
-	
-	
 	// tl.gotoAndPlay("end")
 }
 
