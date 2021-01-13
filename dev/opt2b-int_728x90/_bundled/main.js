@@ -72,12 +72,12 @@ function start() {
 	(0, _commonJsCommonJs.init_set)();
 
 	tl.from(".t1", .4, { x: -_commonJsCommonJs.size.w }, "+=.2");
-	tl.from(".line_1", 1, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	// tl.from(".line_1", 1, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 
 	tl.add("f2", read.t1);
-	tl.to([".t1", ".line_1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
+	tl.to([".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
-	tl.from(".line_2", 1, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	// tl.from(".line_2", 1, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 	tl.add((0, _commonJsCommonJs.end)(read));
 
 	// tl.gotoAndPlay("end")

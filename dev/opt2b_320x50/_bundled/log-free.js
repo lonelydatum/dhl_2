@@ -74,12 +74,12 @@ function start() {
 	void 0;
 
 	tl.from(".t1", .3, { x: -_commonJsCommonJs.size.w }, "+=.2");
-	tl.from(".line_1a", .8, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	// tl.from(".line_1a", .8, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 
 	tl.add("f2", read.t1);
-	tl.to([".line_1a", ".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
+	tl.to([".t1"], .5, { opacity: 0, x: _commonJsCommonJs.size.w }, "f2");
 	tl.from(".t2", .5, { x: -_commonJsCommonJs.size.w }, "f2");
-	tl.from(".line_2a", 1.6, { clip: "rect(0px, " + 0 + "px, " + _commonJsCommonJs.size.hh + "px, 0px)" });
+	// tl.from(".line_2a", 1.6, {clip: `rect(0px, ${0}px, ${size.hh}px, 0px)`})		
 
 	tl.add((0, _commonJsCommonJs.end)(read));
 

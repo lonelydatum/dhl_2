@@ -19,7 +19,7 @@ function start(){
 	
 	
 	tl.add("f2", read.t1)
-	tl.to([".line", ".t1"], .5, {opacity:0, x:size.w}, "f2")
+	tl.to([".t1"], .5, {opacity:0, x:size.w}, "f2")
 	tl.from(".t2a", .5, {x:-size.w}, "f2")
 	tl.from(".t2b", .3, {opacity:0}, "+=1.2")
 
